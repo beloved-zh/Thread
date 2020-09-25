@@ -2,12 +2,13 @@ package com.zh.pool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * @author Beloved
  * @date 2020/9/24 22:46
  *
- * 测试线程池
+ * 测试线程池newFixedThreadPool
  */
 public class TestPool {
 
@@ -15,7 +16,6 @@ public class TestPool {
         // 1.创建线程池
         //  nThreads：线程池大小
         ExecutorService service = Executors.newFixedThreadPool(10);
-
         // 2.执行
         service.execute(new MyThread());
         service.execute(new MyThread());
